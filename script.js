@@ -75,7 +75,7 @@ function getTechAnalysis(ticker){
 
 
 //Interval API fetching
-setInterval(getCurrentPrice, 4000);
+setInterval(getCurrentPrice, 6000);
 
 async function callBinanceAPi(symbol) {
   
@@ -93,9 +93,9 @@ async function getCurrentPrice() {
     for (let i = 1; i < tbl.rows.length; i++) {
         let data = await callBinanceAPi(tbl.rows[i].cells[0].childNodes[0].value+"USDT");
 
-        tbl.rows[i].cells[3].innerText = parseFloat(data.price).toFixed(2);
+        tbl.rows[i].cells[3].innerText = parseFloat(data.price).toFixed(3);
 
         var gain = (parseFloat(tbl.rows[i].cells[1].childNodes[0].value) * parseFloat(data.price)) - (parseFloat(tbl.rows[i].cells[1].childNodes[0].value) * parseFloat(tbl.rows[i].cells[2].childNodes[0].value))
-        tbl.rows[i].cells[4].innerText = gain.toFixed(2);
+        tbl.rows[i].cells[4].innerText = gain.toFixed(3);
     }
 }
