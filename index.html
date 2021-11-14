@@ -12,17 +12,14 @@
 <body>
     <div name="TickersList">
 
-        <table id="main_ticker_list">
-            <tr>
-                <th>Ticker</th>
-                <th>Amount</th>
-                <th>Buy Price</th>
-                <th>Current Price</th>
-                <th>Gain</th>
-            </tr>
+        <div id="file-input">
+        <input type="file" id="tickers_list" accept=".doc, .txt, .csv" on>
+        </div>
 
-       
-        </table> 
+        <div id="table-container">
+          <table id="main_table_tickers" class="styled-table">
+          </table>
+        </div>
         
         <button id="add_row" onclick="addNewTableRow()">Add Row</button>
         <br />
