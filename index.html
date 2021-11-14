@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>Page Title</title>
+    <title>Investment Dashboard</title>
     <script type="text/javascript" src="script.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,18 +12,11 @@
 <body>
     <div name="TickersList">
 
-        <table id="main_ticker_list">
-            <tr>
-                <th>Ticker</th>
-                <th>Amount</th>
-                <th>Buy Price</th>
-                <th>Current Price</th>
-                <th>Gain</th>
-            </tr>
-
-       
-        </table> 
-        
+        <div id="table-container">
+          <table id="main_table_tickers" class="styled-table">
+          </table>
+        </div>
+        <button id="add_row" onclick="creatTableFromFile()">Load Table</button>
         <button id="add_row" onclick="addNewTableRow()">Add Row</button>
         <br />
         <br />
